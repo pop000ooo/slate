@@ -34,6 +34,10 @@ under the License.
     <style>
       <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
     </style>
+    <style>
+      .highlight .s2{color: #c1ef65;}
+      .highlight .mi{color: #77bcd7;}
+    </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
     <% if current_page.data.search %>

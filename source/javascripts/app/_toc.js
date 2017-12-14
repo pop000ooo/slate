@@ -19,8 +19,8 @@
   };
 
   var closeToc = function() {
-    $(".toc-wrapper").removeClass('open');
-    $("#nav-button").removeClass('open');
+    // $(".toc-wrapper").removeClass('open');
+    // $("#nav-button").removeClass('open');
   };
 
   function loadToc($toc, tocLinkSelector, tocListSelector, scrollOffset) {
@@ -69,13 +69,13 @@
       if (!$best.hasClass("active")) {
         // .active is applied to the ToC link we're currently on, and its parent <ul>s selected by tocListSelector
         // .active-expanded is applied to the ToC links that are parents of this one
-        $toc.find(".active").removeClass("active");
-        $toc.find(".active-parent").removeClass("active-parent");
-        $best.addClass("active");
-        $best.parents(tocListSelector).addClass("active").siblings(tocLinkSelector).addClass('active-parent');
-        $best.siblings(tocListSelector).addClass("active");
-        $toc.find(tocListSelector).filter(":not(.active)").slideUp(150);
-        $toc.find(tocListSelector).filter(".active").slideDown(150);
+        // $toc.find(".active").removeClass("active");
+        // $toc.find(".active-parent").removeClass("active-parent");
+        // $best.addClass("active");
+        // $best.parents(tocListSelector).addClass("active").siblings(tocLinkSelector).addClass('active-parent');
+        // $best.siblings(tocListSelector).addClass("active");
+        // $toc.find(tocListSelector).filter(":not(.active)").slideUp(150);
+        // $toc.find(tocListSelector).filter(".active").slideDown(150);
         // TODO remove classnames
         document.title = $best.data("title") + " – " + originalTitle;
       }

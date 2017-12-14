@@ -31,8 +31,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @extend %default-font;
-  background-color: $main-bg;
+  background-color: #fff;
   height: 100%;
+  color: #4c555a;
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
@@ -58,9 +59,10 @@ html, body {
   left: 0;
   bottom: 0;
   width: $nav-width;
-  background-color: $nav-bg;
+  background-color: #fafcfc;
   font-size: 13px;
   font-weight: bold;
+  border-right: 1px solid #f0f4f7;
 
   // language selector for mobile devices
   .lang-selector {
@@ -167,14 +169,23 @@ html, body {
   }
 
   .toc-list-h2 {
-    display: none;
-    background-color: $nav-subitem-bg;
+    // display: none;
+    // background-color: $nav-subitem-bg;
+    color: #4c555a;
     font-weight: 500;
+    padding-bottom: 26px;
   }
 
   .toc-h2 {
-    padding-left: $nav-padding + $nav-indent;
-    font-size: 12px;
+    // padding-left: $nav-padding + $nav-indent;
+    font-size: 14px;
+    color: #4c555a;
+    padding: 6px 15px;
+  }
+
+  .toc-h2:hover{
+    color: #292e31;
+    text-decoration: underline;
   }
 
   .toc-footer {
@@ -183,7 +194,7 @@ html, body {
     border-top: 1px dashed $nav-footer-border-color;
 
     li,a {
-      color: $nav-text;
+      color: #4c555a;
       text-decoration: none;
     }
 
@@ -200,13 +211,13 @@ html, body {
 }
 
 .toc-link, .toc-footer li {
-  padding: 0 $nav-padding 0 $nav-padding;
+  padding: 6px 15px;
   display: block;
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
-  color: #fff;
+  color: #939da3;
   transition-property: background;
   transition-timing-function: linear;
   transition-duration: 130ms;
@@ -254,7 +265,7 @@ html, body {
   margin-left: $nav-width;
   position: relative;
   z-index: 10;
-  background-color: $main-bg;
+  // background-color: $main-bg;
   min-height: 100%;
 
   padding-bottom: 1px; // prevent margin overflow
@@ -276,7 +287,6 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid $lang-select-active-bg;
   }
 }
 
@@ -284,22 +294,20 @@ html, body {
   background-color: $lang-select-bg;
   width: 100%;
   font-weight: bold;
+  padding: 10px 5px 10px 20px;
   a {
     display: block;
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 14px;
+    margin-right: 6px;
     line-height: 30px;
+    border-radius: 4px;
     outline: 0;
 
-    &:active, &:focus {
-      background-color: $lang-select-pressed-bg;
-      color: $lang-select-pressed-text;
-    }
-
     &.active {
-      background-color: $lang-select-active-bg;
+      background-color: $blue-color;
       color: $lang-select-active-text;
     }
   }
@@ -350,13 +358,14 @@ html, body {
   h1 {
     @extend %header-font;
     font-size: 25px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-bottom: $h1-margin-bottom;
-    margin-top: 2em;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    // padding-top: 0.5em;
+    // padding-bottom: 0.5em;
+    margin-bottom: 60px;
+    margin-top: 120px;
+    // border-top: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
     background-color: #fdfdfd;
+    color: #292e31;
   }
 
   h1:first-child, div:first-child + h1 {
